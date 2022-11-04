@@ -1,0 +1,274 @@
+html
+{
+    font-family: 'Darker Grotesque';
+    font-size: 14px;
+
+    --bg-body: #cbd9da;
+    --bg-wrapper: #fcffff;
+    --bg-table-container: white;
+    --bg-sortable-table-head: #d3e1e2;
+    --bg-sortable-table-odd-rows: #eaf8f9;
+    --bg-sortable-table-rows-hover: #a6b1b2;
+
+    --text-body: black;
+    --text-wrapper: black;
+    --text-sortable-table: black;
+    --text-sortable-table-head: black;
+    --text-sortable-table-head-active: black;
+    --text-sortable-table-head-hover: black;
+    --text-sortable-table-rows-hover: black;
+    --text-picker: black;
+
+    --border-general: 1px solid lightgray;
+    --border-general-radius: 15px;
+
+    --font-weight-general: 600;
+}
+html[data-theme='green']
+{
+    --bg-body: #dadada;
+    --bg-wrapper: #eeeeee;
+    --bg-table-container: white;
+    --bg-sortable-table-head: #ccd7cf;
+    --bg-sortable-table-odd-rows: #e0ebe3;
+    --bg-sortable-table-rows-hover: #a6b29c;
+
+    --text-body: black;
+    --text-wrapper: black;
+    --text-sortable-table: black;
+    --text-sortable-table-head: black;
+    --text-sortable-table-head-active: black;
+    --text-sortable-table-head-hover: black;
+    --text-sortable-table-rows-hover: black;
+    --text-picker: black;
+
+    --border-general: 1px solid lightgray;
+    --border-general-radius: 15px;
+
+    --font-weight-general: 600;
+}
+html[data-theme='dark']
+{
+    --bg-body: #1A1A1A;
+    --bg-wrapper: #3D3D3D;
+    --bg-table-container: #303030;
+    --bg-sortable-table-head: #242424;
+    --bg-sortable-table-odd-rows: #565656;
+    --bg-sortable-table-rows-hover: #7E7E7E;
+
+    --text-body: white;
+    --text-wrapper: white;
+    --text-sortable-table: white;
+    --text-sortable-table-head: white;
+    --text-sortable-table-head-active: white;
+    --text-sortable-table-head-hover: white;
+    --text-sortable-table-rows-hover: black;
+    --text-picker: white;
+
+    --border-general: 1px solid black;
+    --border-general-radius: 15px;
+
+    --font-weight-general: 600;
+}
+html[data-theme='sch']
+{
+    --bg-body: #102b4e;
+    --bg-wrapper: #cf9a2a;
+    --bg-table-container: #08172a;
+    --bg-sortable-table-head: #cf9a2a;
+    --bg-sortable-table-odd-rows: #102b4e;
+    --bg-sortable-table-rows-hover: #27a9e0;
+
+    --text-body: black;
+    --text-wrapper: black;
+    --text-sortable-table: white;
+    --text-sortable-table-head: white;
+    --text-sortable-table-head-active: white;
+    --text-sortable-table-head-hover: white;
+    --text-sortable-table-rows-hover: white;
+    --text-picker: white;
+
+    --border-general: 1px solid #08172a;
+    --border-general-radius: 15px;
+
+    --font-weight-general: 600;
+}
+
+html[data-theme='lcars']
+{
+    --bg-body: #000000;
+    --bg-wrapper: #9a99ff;
+    --bg-table-container: #ffcc9a;
+    --bg-sortable-table-head: #ff9a66;
+    --bg-sortable-table-odd-rows: #cb99cc;
+    --bg-sortable-table-rows-hover: #cc6698;
+
+    --text-body: black;
+    --text-wrapper: black;
+    --text-sortable-table: black;
+    --text-sortable-table-head: black;
+    --text-sortable-table-head-active: black;
+    --text-sortable-table-head-hover: black;
+    --text-sortable-table-rows-hover: black;
+    --text-picker: white;
+
+    --border-general: 1px solid #000000;
+    --border-general-radius: 15px;
+
+    --font-weight-general: 600;
+}
+
+body
+{
+    color: var(--text-body);
+    background-color: var(--bg-body);
+}
+
+.wrapper
+{
+    color: var(--text-wrapper);
+    width: 95%;
+    background-color: var(--bg-wrapper);
+    border: var(--border-general);
+    border-radius: var(--border-general-radius);
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+.picker
+{
+    color: var(--text-picker);
+}
+.tablecontainer
+{
+    background-color: var(--bg-table-container);
+    border-radius: var(--border-general-radius);
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 95%;
+}
+
+.reportname
+{
+    font-weight: var(--font-weight-general);
+    text-align: left;
+}
+
+.times
+{
+    text-align: center;
+}
+
+.dates
+{
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.sortable
+{
+    border-spacing: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sortable tbody tr:nth-child(odd)
+{
+    background: var(--bg-sortable-table-odd-rows);
+}
+
+.sortable tbody tr:hover
+{
+    background-color: var(--bg-sortable-table-rows-hover);
+    color: var(--text-sortable-table-rows-hover);
+}
+
+.sortable tbody tr:nth-child(odd):hover
+{
+    background: var(--bg-sortable-table-rows-hover);
+    color: var(--text-sortable-table-rows-hover);
+}
+
+.sortable td, .sortable th
+{
+    color: var(--text-sortable-table);
+    border: var(--border-general);
+    margin-top: 2px;
+    margin-bottom: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.sortable td:first-child, .sortable th:first-child
+{
+    border-top-left-radius: var(--border-general-radius);
+    border-bottom-left-radius: var(--border-general-radius);
+}
+  
+.sortable td:last-child, .sortable th:last-child
+{
+    border-top-right-radius: var(--border-general-radius);
+    border-bottom-right-radius: var(--border-general-radius);
+}
+  
+.sortable th
+{
+    background: var(--bg-sortable-table-head);
+    color: var(--text-sortable-table);
+    cursor: pointer;
+    font-weight: normal;
+    text-align: left;
+    text-transform: capitalize;
+    vertical-align: baseline;
+    white-space: nowrap;
+}
+  
+.sortable th:hover
+{
+    color: var(--text-sortable-table-head);
+}
+  
+.sortable th:hover::after
+{
+    color: inherit;
+    font-size: 1.2em;
+    content: ' \025B8';
+}
+  
+.sortable th::after
+{
+    font-size: 1.2em;
+    color: transparent;
+    content: ' \025B8';
+}
+  
+.sortable th.dir-d
+{
+    font-weight: var(--font-weight-general);
+    color: var(--text-sortable-table-head-active);
+}
+  
+.sortable th.dir-d::after
+{
+    color: var(--text-sortable-table-head-hover);
+    content: ' \025BE';
+}
+  
+.sortable th.dir-u
+{
+    font-weight: var(--font-weight-general);
+    color: var(--text-sortable-table-head-active);
+}
+  
+.sortable th.dir-u::after
+{
+    color: var(--text-sortable-table-head-hover);
+    content: ' \025B4';
+}
