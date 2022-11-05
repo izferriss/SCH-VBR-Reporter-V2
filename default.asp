@@ -60,19 +60,21 @@
                                                 var timestring = temp[k].substring(temp[k].indexOf(" ") + 1, temp[k].length);
                                                 var hours, minutes, ampm;
                                                 ampm = timestring.substring(timestring.indexOf(" ") + 1);
-                                                hours = timestring.substring(0, 1).padStart(2, "0");
+                                                hours = timestring.substring(0, timestring.indexOf(":")).padStart(2, "0");
                                                 minutes = timestring.substring(3, timestring.indexOf(" ")).padStart(5, "0");
                                                 if(ampm == "AM" && hours == "12")
                                                 {
-                                                    hours = 0;
+                                                    hours = "00";
                                                 }
-                                                if(ampm == "PM")
+                                                if(ampm == "PM" && hours != "12")
                                                 {
                                                     hours = parseInt(hours) + 12;
                                                 }
                                                 document.write(hours + ":" + minutes + "<BR>");
                                                 var thiscell = document.getElementById(i.toString() + "-" + j.toString());
-                                                var datasort = parseInt(hours + minutes.substring(0, 1) + minutes.substring(3))
+                                                var datasort = parseInt(hours + minutes.substring(0, minutes.indexOf(":")) + minutes.substring(3));
+
+                                                //This will always assign the sort value as the last (latest time) string in the cell
                                                 thiscell.setAttribute("data-sort", datasort);
                                             }
                                         }
@@ -80,6 +82,8 @@
                                 }
                             document.write("</TR>");
                         }
+                        //one row for each key in report map
+                        //if date value matches table header, insert time into cell
                     </script>
                 </TBODY>
             </TABLE>
