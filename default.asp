@@ -80,8 +80,6 @@
                                 }
                             document.write("</TR>");
                         }
-                        //one row for each key in report map
-                        //if date value matches table header, insert time into cell
                     </script>
                 </TBODY>
             </TABLE>
